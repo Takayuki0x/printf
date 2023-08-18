@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _printf - a replica of printf from stdio
  * Procudes an output according to a format and additional arguments
