@@ -6,6 +6,6 @@
 
 int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)))
 {
-printf("%d", "string");
+printf("%d\n", "string");
 return (0);
 }
