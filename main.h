@@ -9,6 +9,7 @@
 
 int getStringLength(char *string);
 int _putchar(char character);
+int CheckForFormatting(char *string);
 
 int _printf(const char *format, ...);
 

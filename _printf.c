@@ -5,5 +5,5 @@
 
 int _printf(const char *format, ...)
 {
-
+CheckForFormatting(format);
 }
