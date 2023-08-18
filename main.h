@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+#define UNUSED(x) (void)(x)
+
 int getStringLength(char *string);
 int _putchar(char character);
 
