@@ -1,13 +1,16 @@
 #include "main.h"
 
 
-int CheckForFormatting(char *string)
+int CheckForFormatting(const char *string)
 {
 int i;
+char *str;
 
-while (string[i] != '\0')
+stringcopy(str, string);
+
+while (str[i] != '\0')
 {
-if(string[i] == "%")
+if(str[i] == "%")
 {
 _putchar("E");
 }
@@ -18,4 +21,5 @@ _putchar("O");
 _putchar("\n");
 i++;
 }
+return (0);
 }

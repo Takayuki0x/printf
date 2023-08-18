@@ -7,9 +7,12 @@
 
 #define UNUSED(x) (void)(x)
 
+char *stringcopy(char *destination, char *source);
+
 int getStringLength(char *string);
 int _putchar(char character);
-int CheckForFormatting(char *string);
+
+int CheckForFormatting(const char *string);
 
 int _printf(const char *format, ...);
 
