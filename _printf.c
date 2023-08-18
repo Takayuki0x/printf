@@ -8,6 +8,7 @@
 int _printf(const char *format, ...)
 {
 CheckForFormatting(format);
+return (0);
 }
 
 /**
