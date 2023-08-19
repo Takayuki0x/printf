@@ -39,5 +39,5 @@ _putchar(string[i]);
 i++;
 }
 
-return(i - 1);
+return(i);
 }
