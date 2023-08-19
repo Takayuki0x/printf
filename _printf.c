@@ -22,12 +22,15 @@ case '%':
 switch (format[i + 1])
 {
 case 'c':
-_putchar(va_arg(params, int));
+_putchar(va_arg(params, char *));
 i += 2;
 break;
 case 's':
 sPrinter(va_arg(params, char *));
 i += 2;
+break;
+case '%':
+_putchar(37);
 break;
 }
 break;
