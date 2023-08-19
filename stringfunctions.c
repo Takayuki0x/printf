@@ -22,6 +22,17 @@ int sPrinter(char *string)
 {
 int i = 0;
 
+if (!string)
+{
+_putchar('(');
+_putchar('n');
+_putchar('u');
+_putchar('l');
+_putchar('l');
+_putchar(')');
+return(6);
+}
+
 while (string[i] != '\0')
 {
 _putchar(string[i]);
