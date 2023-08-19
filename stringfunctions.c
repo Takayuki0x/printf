@@ -2,11 +2,11 @@
 
 /**
  * _putchar - writes a character to standard output buffer
- * @character: character to write
+ * @character: character to write, passed as an int to avoid casting errors
  * Return: 1 or -1
 */
 
-int _putchar(char character)
+int _putchar(int character)
 {
 return(write(1, &character, 1));
 }

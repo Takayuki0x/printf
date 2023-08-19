@@ -20,7 +20,7 @@ case '%':
 switch (format[i + 1])
 {
 case 'c':
-_putchar(va_arg(params, char *));
+_putchar(va_arg(params, int));
 i += 2;
 break;
 case 's':
