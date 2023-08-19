@@ -13,7 +13,7 @@ int i = 0, number_printed = 0, tempholder = 0;
 va_list params;
 
 va_start(params, format);
-if (format[0] == '%')
+if (!format)
 return (-1);
 
 while (format[i] != '\0')
@@ -30,7 +30,7 @@ break;
 case 's':
 tempholder = sPrinter(va_arg(params, char *));
 i += 2;
-number_printed += tempholder;
+number_printed += tempholder - 1;
 break;
 case '%':
 _putchar(37);
