@@ -17,34 +17,24 @@ while (format[i] != '\0')
 switch (format[i])
 {
 case '%':
-    switch (format[i + 1])
-    {
-        case 'c':
-            _putchar(va_arg(params, char *));
-            i += 2;
-            break;
-        case 's':
-            sPrinter(va_arg(params, char *));
-            i += 2;
-            break;
-    }
-    break;
+switch (format[i + 1])
+{
+case 'c':
+_putchar(va_arg(params, char *));
+i += 2;
+break;
+case 's':
+sPrinter(va_arg(params, char *));
+i += 2;
+break;
+}
+break;
 
 default:
-    _putchar(format[i]);
-    i++;
-    break;
+_putchar(format[i]);
+i++;
+break;
 }
 number_printed++;
 }
-}
-
-/**
- * For testing
-*/
-
-int main()
-{
-_printf("%s\n", "aaaa");
-return (0);
 }
