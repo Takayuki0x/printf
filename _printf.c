@@ -47,7 +47,7 @@ break;
 number_printed++;
 }
 va_end(params);
-if (iserror)
+if (iserror == 1)
 return (-1);
 return (number_printed);
 }
