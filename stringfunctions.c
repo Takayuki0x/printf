@@ -22,7 +22,7 @@ int sPrinter(char *string)
 {
 int i = 0;
 
-if (!string)
+if (string == NULL)
 {
 _putchar('(');
 _putchar('n');
