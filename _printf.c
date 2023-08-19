@@ -37,4 +37,5 @@ break;
 }
 number_printed++;
 }
+return (number_printed);
 }
