@@ -8,6 +8,11 @@
 
 int _putchar(int character)
 {
+if (character == NULL)
+{
+return (-1);
+}
+
 return (write(1, &character, 1));
 }
 
