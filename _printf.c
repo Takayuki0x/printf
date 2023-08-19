@@ -13,6 +13,8 @@ int i = 0, number_printed = 0, tempholder = 0;
 va_list params;
 
 va_start(params, format);
+if (!format)
+return (-1);
 
 while (format[i] != '\0')
 {
