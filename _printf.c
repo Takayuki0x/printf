@@ -35,7 +35,6 @@ _putchar(37);
 i += 2;
 break;
 default:
-i += 2;
 break;
 }
 break;
