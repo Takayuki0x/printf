@@ -8,7 +8,7 @@
 
 int _putchar(int character)
 {
-if (character == NULL)
+if (!character)
 {
 return (-1);
 }
