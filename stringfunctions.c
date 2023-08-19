@@ -8,7 +8,7 @@
 
 int _putchar(int character)
 {
-return(write(1, &character, 1));
+return (write(1, &character, 1));
 }
 
 /**
@@ -30,7 +30,7 @@ _putchar('u');
 _putchar('l');
 _putchar('l');
 _putchar(')');
-return(6);
+return (6);
 }
 
 while (string[i] != '\0')
@@ -39,5 +39,5 @@ _putchar(string[i]);
 i++;
 }
 
-return(i);
+return (i);
 }
