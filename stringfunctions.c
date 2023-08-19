@@ -18,7 +18,7 @@ return(write(1, &character, 1));
  * Return: Nothing
 */
 
-void sPrinter(const char *string)
+void sPrinter(char *string)
 {
 int i = 0;
 

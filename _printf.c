@@ -26,7 +26,7 @@ _putchar(va_arg(params, int));
 i += 2;
 break;
 case 's':
-sPrinter(va_arg(params, const char *));
+sPrinter(va_arg(params, char *));
 i += 2;
 break;
 case '%':
