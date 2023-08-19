@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-int i = 0, number_printed = 0, tempholder = 0;
+int i = 0, number_printed = 0, tempholder = 0, iserror = 0;
 va_list params;
 va_start(params, format);
 if (!format)
@@ -35,6 +35,7 @@ _putchar(37);
 i += 2;
 break;
 default:
+iserror = 1;
 break;
 }
 break;
@@ -46,5 +47,7 @@ break;
 number_printed++;
 }
 va_end(params);
+if (iserror)
+return (-1);
 return (number_printed);
 }
