@@ -3,6 +3,8 @@
 /**
  * _printf - a replica of printf from stdio
  * Procudes an output according to a format and additional arguments
+ * @format: the formatting string to use
+ * Return: the number of characters printed
 */
 
 int _printf(const char *format, ...)
