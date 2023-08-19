@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-int i = 0, number_printed = 0;
+int i = 0, number_printed = 0, tempholder = 0;
 va_list params;
 
 va_start(params, format);
@@ -26,8 +26,9 @@ _putchar(va_arg(params, int));
 i += 2;
 break;
 case 's':
-sPrinter(va_arg(params, char *));
+tempholder = sPrinter(va_arg(params, char *));
 i += 2;
+number_printed += tempholder;
 break;
 case '%':
 _putchar(37);

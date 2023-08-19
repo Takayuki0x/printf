@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 int _putchar(int character);
-void sPrinter(char *string);
+int sPrinter(char *string);
 
 int _printf(const char *format, ...);
 
