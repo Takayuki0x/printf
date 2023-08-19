@@ -11,11 +11,9 @@ int _printf(const char *format, ...)
 {
 int i = 0, number_printed = 0, tempholder = 0;
 va_list params;
-
 va_start(params, format);
 if (!format)
 return (-1);
-
 while (format[i] != '\0')
 {
 switch (format[i])
@@ -37,10 +35,10 @@ _putchar(37);
 i += 2;
 break;
 default:
+i += 2;
 break;
 }
 break;
-
 default:
 _putchar(format[i]);
 i++;
