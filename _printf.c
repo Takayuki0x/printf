@@ -36,6 +36,7 @@ i += 2;
 break;
 default:
 iserror = 1;
+i++;
 break;
 }
 break;
