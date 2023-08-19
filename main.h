@@ -7,12 +7,13 @@
 
 #define UNUSED(x) (void)(x)
 
-char *stringcopy(char *destination, char *source);
+typedef struct printingFormat pf;
 
-int getStringLength(char *string);
 int _putchar(char character);
+void sPrinter(char *string);
 
 int CheckForFormatting(const char *string);
+
 
 int _printf(const char *format, ...);
 

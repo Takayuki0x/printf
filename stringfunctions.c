@@ -12,25 +12,13 @@ return(write(1, &character, 1));
 }
 
 
-/**
- * getStringLength - Gets the length of a string
- * @string: String to get length of
- * Return: 0 if string is NULL, Lenght of string otherwise
-*/
-
-int getStringLength(char *string)
+void sPrinter(char *string)
 {
 int i = 0;
 
-if (!string)
-return (0);
-
 while (string[i] != '\0')
 {
+_putchar(string[i]);
 i++;
 }
-
-return (i);
 }
-
-
