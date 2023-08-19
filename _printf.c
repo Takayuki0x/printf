@@ -31,6 +31,7 @@ i += 2;
 break;
 case '%':
 _putchar(37);
+i += 2;
 break;
 }
 break;
