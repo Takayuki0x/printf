@@ -46,5 +46,6 @@ break;
 }
 number_printed++;
 }
+va_end(params);
 return (number_printed);
 }
