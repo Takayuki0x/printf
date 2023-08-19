@@ -13,7 +13,7 @@ int i = 0, number_printed = 0, tempholder = 0;
 va_list params;
 
 va_start(params, format);
-if (!format)
+if (format[0] == '%')
 return (-1);
 
 while (format[i] != '\0')
@@ -35,6 +35,8 @@ break;
 case '%':
 _putchar(37);
 i += 2;
+break;
+default:
 break;
 }
 break;
