@@ -66,10 +66,16 @@ int _printf(const char *format, ...)
         {
             case '%':
                 tempholder = handleString(format[i + 1], format[i + 2], params);
-                if(tempholder == -1)
-                    iserror = 1;
                 number_printed += tempholder - 1;
-                i += 2;
+                if(tempholder == -1)
+                {
+                    iserror = 1;
+                    i++;
+                }
+                else
+                {
+                    i += 2;
+                }
             break;
             default:
                 _putchar(format[i]);
