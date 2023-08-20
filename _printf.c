@@ -6,7 +6,7 @@
 
 int handleString(char specifier1, char stringEnd, va_list params)
 {
-    int len = 0, iserror = 0, tempholder = 0;
+    int iserror = 0, tempholder = 0;
     switch (specifier1)
     {
         case 'c':
@@ -14,9 +14,12 @@ int handleString(char specifier1, char stringEnd, va_list params)
             return(1);
         case 's':
             tempholder = sPrinter(va_arg(params, char *));
+            return(tempholder);
             break;
         case '%':
             _putchar(37);
+            return(1);
+            break;
         default:
             if (stringEnd == '\0')
             {
