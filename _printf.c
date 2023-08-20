@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
     va_list params;
     va_start(params, format);
 
-    if (!format || (format[0] == '%' && !format[1]))
+    if (!format || (format[0] == '%' && !format[1]) || format[0] == '%' && format[1] == ' ' && !format[2])
     return (-1);
 
     while (format[i] != '\0')
