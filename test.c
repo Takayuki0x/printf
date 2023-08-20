@@ -1,14 +1,48 @@
-#include "main.h"
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdarg.h>
 
-/**
- * handleString - handles the conversion specifiers for strings
-*/
+int _putchar(int character)
+{
+    return (write(1, &character, 1));
+}
+
+
+int sPrinter(char *string)
+{
+    int i = 0;
+    
+    
+    if (string == NULL)
+    {
+        _putchar('(');
+        _putchar('n');
+        _putchar('u');
+        _putchar('l');
+        _putchar('l');
+        _putchar(')');
+        return (6);
+    }
+    
+    while (string[i] != '\0')
+    {
+        if (string[i])
+        {
+            _putchar(string[i]);
+        }
+        i++;
+    }
+
+    
+    return (i);
+}
 
 int handleString(char specifier1, char stringEnd, va_list params)
 {
     int iserror = 0, tempholder = 0;
-    if(!params)
-        return (0);
+    
     switch (specifier1)
     {
         case 'c':
@@ -26,7 +60,7 @@ int handleString(char specifier1, char stringEnd, va_list params)
             iserror = 1;
             break;
         default:
-            if (!stringEnd && stringEnd == '\0')
+            if (!stringEnd || stringEnd == '\0')
             {
                 iserror = 1;
             }
@@ -43,21 +77,13 @@ int handleString(char specifier1, char stringEnd, va_list params)
     return (0);
 }
 
-
-/**
- * _printf - a replica of printf from stdio
- * Procudes an output according to a format and additional arguments
- * @format: the formatting string to use
- * Return: the number of characters printed
-*/
-
 int _printf(const char *format, ...)
 {
     int i = 0, number_printed = 0, tempholder = 0, iserror = 0;
     va_list params;
     va_start(params, format);
 
-    if (!format || (format[0] == '%' && !format[1]) || (format[0] == '%' && format[1] == ' ' && !format[2]))
+    if (!format || format == NULL)
     return (-1);
 
     while (format[i] != '\0')
@@ -84,4 +110,18 @@ int _printf(const char *format, ...)
         return (-1);
     }
     return (number_printed);
+}
+
+int main() {
+    // Write C code here
+    int len, len2;
+    int t = 50;
+
+    len = _printf("%");
+    printf("len1: %d", len);
+    //len2 = printf("%");
+
+    //printf("Len 1: %d", len);
+
+    return 0;
 }
