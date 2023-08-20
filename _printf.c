@@ -33,6 +33,8 @@ int handleString(char specifier1, char stringEnd, va_list params)
 
     if (iserror == 1)
         return(-1);
+
+    return (0);
 }
 
 
