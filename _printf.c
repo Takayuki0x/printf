@@ -7,6 +7,8 @@
 int handleString(char specifier1, char stringEnd, va_list params)
 {
     int iserror = 0, tempholder = 0;
+    if(!params)
+        return (0);
     switch (specifier1)
     {
         case 'c':
