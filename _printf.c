@@ -2,6 +2,11 @@
 
 /**
  * handleString - handles the conversion specifiers for strings
+ * @specifier1: the direct character after the % character
+ * @stringEnd: the second character after the %character
+ * @params: the variadic arguments list
+ * Return: returns 0 if nothing to print, -1 if error, -2 if it should print
+ * the specifier1, or the length of the printed string if none apply
 */
 
 int handleString(char specifier1, char stringEnd, va_list params)
