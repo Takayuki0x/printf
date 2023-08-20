@@ -59,29 +59,6 @@ int _printf(const char *format, ...)
                     iserror = 1;
                 number_printed += tempholder - 1;
                 i += 2;
-            /**
-                switch (format[i + 1])
-                {
-                    case 'c':
-                        _putchar(va_arg(params, int));
-                        i += 2;
-                    break;
-                    case 's':
-                        tempholder = sPrinter(va_arg(params, char *));
-                        i += 2;
-                        number_printed += tempholder - 1;
-                        break;
-                    case '%':
-                        _putchar(37);
-                        i += 2;
-                    break;
-                    default:
-                        if (format[i + 2] == '\0')
-                            iserror = 1;
-                        i++;
-                    break;
-                }
-            */
             break;
             default:
                 _putchar(format[i]);
