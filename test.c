@@ -91,6 +91,11 @@ int _printf(const char *format, ...)
         switch (format[i])
         {
             case '%':
+                if (format[i + 1] == ' ')
+                {
+                    i++;
+                    continue;
+                }
                 tempholder = handleString(format[i + 1], format[i + 2], params);
                 number_printed += tempholder - 1;
                 if(tempholder == -1)
