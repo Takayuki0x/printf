@@ -61,11 +61,6 @@ while (format[i] != '\0')
 switch (format[i])
 {
 case '%':
-if (format[i + 1] == ' ')
-{
-i++;
-continue;
-}
 tempholder = handleString(format[i + 1], format[i + 2], params);
 if(tempholder == -1)
 {
@@ -78,9 +73,7 @@ tempholder = 1;
 i++;
 }
 else
-{
 i += 2;
-}
 number_printed += tempholder - 1;
 break;
 default:
@@ -92,8 +85,6 @@ number_printed++;
 }
 va_end(params);
 if (iserror == 1)
-{
 return (-1);
-}
 return (number_printed);
 }
