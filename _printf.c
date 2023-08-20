@@ -22,8 +22,11 @@ int handleString(char specifier1, char stringEnd, va_list params)
             _putchar(37);
             return(1);
             break;
+        case '\0':
+            iserror = 1;
+            break;
         default:
-            if (stringEnd == '\0')
+            if (!stringEnd && stringEnd == '\0')
             {
                 iserror = 1;
             }
