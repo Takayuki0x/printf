@@ -27,6 +27,7 @@ int handleString(char specifier1, char stringEnd, va_list params)
             }
             else {
                 _putchar(37);
+                return(1);
             }
             break;
     }
