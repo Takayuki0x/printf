@@ -35,7 +35,10 @@ return (6);
 
 while (string[i] != '\0')
 {
+if (string[i])
+{
 _putchar(string[i]);
+}
 i++;
 }
 
