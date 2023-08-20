@@ -32,7 +32,7 @@ int handleString(char specifier1, char stringEnd, va_list params)
             }
             else {
                 _putchar(37);
-                return(1);
+                return(-2);
             }
             break;
     }
@@ -71,16 +71,21 @@ int _printf(const char *format, ...)
                     continue;
                 }
                 tempholder = handleString(format[i + 1], format[i + 2], params);
-                number_printed += tempholder - 1;
                 if(tempholder == -1)
                 {
                     iserror = 1;
+                    i++;
+                }
+                else if (tempholder == -2)
+                {
+                    tempholder = 1;
                     i++;
                 }
                 else
                 {
                     i += 2;
                 }
+                number_printed += tempholder - 1;
             break;
             default:
                 _putchar(format[i]);
